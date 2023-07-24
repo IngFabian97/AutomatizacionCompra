@@ -15,9 +15,15 @@ public class PaginaThankYou {
     @FindBy (xpath = "//h1[contains(text(),'Thank you')]")
             private WebElement labelThankYou;
 
-    public void validarLabel(){
-        Assert.assertTrue((labelThankYou.isDisplayed()));
+    public boolean validarLabel(String mensaje){
+        System.out.println(mensaje);
+        System.out.println(labelThankYou.getText());
+        return mensaje.equals(labelThankYou.getText());
     }
+
+    //public void validarLabel(){
+    //    Assert.assertTrue((labelThankYou.isDisplayed()));
+    //}
     public void botonContinuar(){
         buttonContinue.click();
     }

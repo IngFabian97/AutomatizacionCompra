@@ -30,7 +30,7 @@ public class Compra extends BaseTestSuite {
 
         sleep(2000);
 
-        paginaThankYou.validarLabel();
+        Assert.assertTrue(paginaThankYou.validarLabel("Thank you"));
 
         paginaThankYou.botonContinuar();
 
